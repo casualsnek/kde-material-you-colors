@@ -518,7 +518,7 @@ def get_material_you_colors(wallpaper_data, ncolor, source_type):
             basewidth = 64
             wpercent = (basewidth/float(img.size[0]))
             hsize = int((float(img.size[1])*float(wpercent)))
-            img = img.resize((basewidth, hsize), Image.Resampling.LANCZOS)
+            img = img.resize((basewidth, hsize), Image.LANCZOS)
             # get best colors
             source_colors = sourceColorsFromImage(img, top=False)
             # close image file
